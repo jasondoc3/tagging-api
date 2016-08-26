@@ -24,11 +24,11 @@ ActiveRecord::Schema.define(version: 20160826041632) do
   create_table "tags", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "entity_type"
     t.integer  "entity_id"
-    t.string   "tag_name"
+    t.string   "name"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["entity_type", "entity_id"], name: "index_tags_on_entity_type_and_entity_id", using: :btree
-    t.index ["tag_name"], name: "index_tags_on_tag_name", using: :btree
+    t.index ["name"], name: "index_tags_on_name", using: :btree
   end
 
 end

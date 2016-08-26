@@ -2,10 +2,10 @@ class CreateTags < ActiveRecord::Migration[5.0]
   def change
     create_table :tags do |t|
       t.references :entity, polymorphic: true, index: true
-      t.string :tag_name
+      t.string :name
       t.timestamps
     end
 
-    add_index :tags, :tag_name
+    add_index :tags, :name
   end
 end

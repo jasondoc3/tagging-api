@@ -1,5 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 corolla_one:
-  tag_name: White
+  name: White
   entity: toyota_corolla
+  entity_type: Car
+
+corolla_two:
+  name: Used
+  entity: toyota_corolla
+  entity_type: Car
+
+scion_one:
+  name: Used
+  entity: scion_tc
+  entity_type: Car
+
+scion_two:
+  name: Black
+  entity: scion_tc
+  entity_type: Car
