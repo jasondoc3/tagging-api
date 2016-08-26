@@ -1,24 +1,32 @@
-# README
+# Generic Tagging JSON API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Supported entities
+This generic JSON tagging API currently supports tagging bikes and cars with arbitrary tags.
 
-Things you may want to cover:
 
-* Ruby version
+The bike and car entities are stored in separate tables.
+Support for more entities can be added by adding another data model.
 
-* System dependencies
+### Decisions and Reasonings
 
-* Configuration
+- Scoped the routes under `/api/v1`. This is how I normally prefer to scope my APIs.
+- Used MySQL as a database. I am most familiar with MySQL.
+- Changed the stats routes to be scoped under `/tags` (`/stats` is now `/api/v1/tags/stats` etc.) This made more sense to me since the stats are directly related to the tags.
+-  Stored all tags in a `tags` table. I used a polymorphic rails association here because I wanted the tag to able to to belong to an arbitrary number of other models on a single association.
+This allows the tags table to store tags of different entity types via the entity_type field. I found that this made querying for tag stats easier as well.
 
-* Database creation
+### Running Tests
 
-* Database initialization
+The test database name is `tagging_test`
 
-* How to run the test suite
+Run the test suite with
+```
+bin/rails test/*
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Alternatively, you could load the fixtures into the development env and test the API.
 
-* Deployment instructions
+```
+RAILS_ENV=development rake db:fixtures:load
 
-* ...
+```
