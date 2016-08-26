@@ -30,6 +30,15 @@ class Api::V1::TagsControllerTest < ActionDispatch::IntegrationTest
     assert_equal(body["tags"], cars(:toyota_corolla).as_json(include: { tags: { only: [:name] } })["tags"])
   end
 
+  test 'Should work for multiple entities' do
+    get "/api/v1/tags/bike/#{bikes(:specialized).id}"
+    assert_response(:ok)
+
+    body = JSON.parse(response.body)
+    assert_equal(body["id"], bikes(:specialized).id)
+    assert_equal(body["tags"], bikes(:specialized).as_json(include: { tags: { only: [:name] } })["tags"])
+  end
+
   # DELETE /api/v1/tags/:entity_type/:entity_id
   test 'Should destroy the entity and all of its tags' do
     car_count = Car.count

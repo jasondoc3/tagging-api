@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+specialized:
+  id: 1
+  model: stumpjumper
+  brand: specialized
+
+raleigh:
+  id: 2
+  model: tokul
+  brand: raleigh
