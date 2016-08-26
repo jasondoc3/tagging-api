@@ -1,7 +1,5 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  tag_name: MyString
-
-two:
-  tag_name: MyString
+corolla_one:
+  tag_name: White
+  entity: toyota_corolla

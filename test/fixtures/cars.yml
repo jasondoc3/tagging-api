@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  model: MyString
-  brand: MyString
-  year: 1
-  miles: 1
+scion_tc:
+  model: tc
+  brand: scion
+  year: 2009
+  miles: 97000
 
-two:
-  model: MyString
-  brand: MyString
-  year: 1
-  miles: 1
+toyota_corolla:
+  model: corolla
+  brand: toyota
+  year: 2006
+  miles: 230000
