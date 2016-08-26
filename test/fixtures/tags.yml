@@ -1,37 +1,26 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 corolla_one:
-  id: 1
   name: White
   entity: toyota_corolla
   entity_type: Car
 
 corolla_two:
-  id: 2
   name: Used
-  entity: toyota_corolla
-  entity_type: Car
+  entity: toyota_corolla (Car)
 
 scion_one:
-  id: 3
   name: Used
-  entity: scion_tc
-  entity_type: Car
+  entity: scion_tc (Car)
 
 scion_two:
-  id: 4
   name: Black
-  entity: scion_tc
-  entity_type: Car
+  entity: scion_tc (Car)
 
 specialized_one:
-  id: 5
   name: Dual Suspension
-  entity: stumpjumper
-  entity_type: Bike
+  entity: stumpjumper (Bike)
 
 raleigh_one:
-  id: 6
   name: Hardtail
-  entity: raleigh
-  entity_type: Bike
+  entity: raleigh (Bike)

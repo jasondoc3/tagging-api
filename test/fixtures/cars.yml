@@ -1,14 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 scion_tc:
-  id: 1
   model: tc
   brand: scion
   year: 2009
   miles: 97000
 
 toyota_corolla:
-  id: 2
   model: corolla
   brand: toyota
   year: 2006
